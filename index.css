@@ -1,0 +1,38 @@
+
+@keyframes scrollDownMarquee {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.scrolling-queue-container:hover .scrolling-queue {
+  animation-play-state: paused;
+}
+
+.scrolling-queue {
+  animation: scrollDownMarquee 20s linear infinite;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Matches space-y-3 */
+}
+
+/* Optional: Add a fade effect at top and bottom */
+.scrolling-queue-container::before,
+.scrolling-queue-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scrolling-queue-container::before {
+  top: 0;
+  background: linear-gradient(to bottom, white, transparent);
+}
+
+.scrolling-queue-container::after {
+  bottom: 0;
+  background: linear-gradient(to top, white, transparent);
+}

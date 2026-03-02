@@ -1,0 +1,7 @@
+{
+  "name": "DentoCloud SaaS",
+  "description": "A comprehensive B2B Dental Clinic Management SaaS with multi-clinic support, smart diagnostics, and advanced clinical workflows.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
